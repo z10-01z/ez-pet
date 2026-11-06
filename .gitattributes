@@ -1,0 +1,5 @@
+*.png binary
+*.gif binary
+*.mp4 binary
+*.ps1 text eol=crlf
+*.md text eol=lf
