@@ -12,7 +12,7 @@ param(
 
 $ErrorActionPreference = 'Stop'
 $source = Join-Path $PSScriptRoot 'ez-girl'
-$spriteHash = 'ee1d890fa7175ece69283ce4e25ac53d6dc8e03e307e5abec2453683407e682d'
+$spriteHash = '28f4f528d4bd1260ec4815721fd5c126ab1ced1868bf5c2d08d7029c11411c5c'
 $manifest = Get-Content -LiteralPath (Join-Path $source 'pet.json') -Raw -Encoding UTF8 | ConvertFrom-Json
 if ($manifest.spriteVersionNumber -ne 2 -or $manifest.spritesheetPath -ne 'spritesheet.png' -or [string]::IsNullOrWhiteSpace($manifest.displayName)) {
     throw 'The package pet.json does not match the EZ v2 package.'
