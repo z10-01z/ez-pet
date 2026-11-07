@@ -5,13 +5,25 @@
 ![九种动作预览](previews/actions.gif)
 ![十六向注视预览](previews/look.gif)
 
-## 下载
+## 下载与分享
 
-1. 登录已获邀访问本仓库的 GitHub 账号。
-2. 打开 [最新发布](https://github.com/z10-01z/ez-pet/releases/latest)，下载 `EZ-Pet-v1.0.0-Windows.zip`。
-3. 先完整解压 ZIP，再按下方任一种方式安装。
+把这个链接发给队友即可，无需 GitHub 账号或仓库邀请：
 
-这是私有仓库；未接受仓库邀请的账号无法下载。不要把整个 ZIP 直接拖进伙伴列表。
+**[下载最新版 Windows 安装包](https://github.com/z10-01z/ez-pet/releases/latest)**
+
+下载 `EZ-Pet-v1.1.0-Windows.zip`，完整解压后按下方方式安装。不要把整个 ZIP 直接拖进伙伴列表。
+
+v1.1.0 保留原人物比例，重绘清晰轮廓、简化碳纤维碎纹理，包含九种动作与十六向注视。客户端格式固定为每帧 **192×208**；本次改善原生尺寸可读性，图集仍为 **1536×2288**，并非扩大客户端支持分辨率。
+
+## 桌面安装链接
+
+支持伙伴安装链接的桌面客户端，可把下面整行复制到浏览器地址栏，打开安装预览后再确认安装。此方式需要客户端启用对应功能；如果没有反应，使用安装包。
+
+```text
+codex://pets/install?name=EZ%E5%A8%98&imageUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fz10-01z%2Fez-pet%2Fv1.1.0%2Fez-girl%2Fspritesheet.png&description=EZ%20%E8%B5%9B%E8%BD%A6%E4%B8%BB%E9%A2%98%E6%9C%BA%E8%83%BD%E4%BC%99%E4%BC%B4%EF%BC%9A%E6%B8%90%E5%8F%98%E9%95%BF%E5%8F%91%E3%80%81%E5%BC%82%E8%89%B2%E7%9E%B3%E3%80%81%E9%9D%92%E8%89%B2%E7%9B%AE%E9%95%9C%E3%80%81%E7%A2%B3%E7%BA%A4%E7%BB%B4%E7%BF%BC%E7%89%87%E4%B8%8E%E7%9B%B4%E6%9F%84%E9%95%B0%E5%88%80%E3%80%82&spriteVersionNumber=2
+```
+
+链接格式来自 [官方桌面命令说明](https://learn.chatgpt.com/docs/reference/commands#pets)。图片固定指向 v1.1.0，避免后续版本改变下载内容。选择安装包或桌面链接其中一种即可；已安装的用户建议使用脚本原位更新。
 
 ## 手动安装
 
@@ -66,13 +78,13 @@ powershell.exe -NoProfile -File .\install.ps1 -Destination 'D:\MyCodex\pets'
 发布页同时提供 `SHA256SUMS.txt`，其中记录 ZIP 的 SHA-256。下载后可检查：
 
 ```powershell
-Get-FileHash -LiteralPath .\EZ-Pet-v1.0.0-Windows.zip -Algorithm SHA256
+Get-FileHash -LiteralPath .\EZ-Pet-v1.1.0-Windows.zip -Algorithm SHA256
 ```
 
 最终精灵图：透明 PNG，1536 × 2288，v2，73 个有效帧；SHA-256：
 
 ```text
-6add1e1e4927afc4e95cbdf5060fe3d90aafed953cf2844a0ac61dfa03801167
+ee1d890fa7175ece69283ce4e25ac53d6dc8e03e307e5abec2453683407e682d
 ```
 
 ## 客户端与常见问题
@@ -83,10 +95,10 @@ Get-FileHash -LiteralPath .\EZ-Pet-v1.0.0-Windows.zip -Algorithm SHA256
 - 动画不播放：检查操作系统是否开启了减少动画/减少动态效果。
 - 此安装包安装本机伙伴文件，不操作云端 Pets 接口，不会替换当前选中的伙伴。
 
-## 给队友开放访问
+## 给队友分享
 
-仓库所有者在 GitHub 打开 **Settings → Collaborators → Add people**，输入队友的 GitHub 用户名并发送邀请。队友接受邀请后，再登录并下载 Release 安装包。
+本仓库公开，队友无需接受邀请或登录 GitHub。分享 [最新发布页](https://github.com/z10-01z/ez-pet/releases/latest) 即可；安装包内有中文说明与动画预览。
 
 ## 内容说明
 
-本包基于 EZ娘最终设定制作，角色图像与动画使用 AI 图像生成工具完成，经动作、方向和图集检查后整理分发。用于车队内部交流，仓库保持私有。
+本包基于 EZ娘最终设定制作，角色图像与动画使用 AI 图像生成工具完成，经动作、方向和图集检查后整理分发。用于角色展示与车队交流。仓库仅包含分发所需的伙伴文件、安装脚本、预览与安装测试，不包含本机配置、账号记录或客户端提取代码。
